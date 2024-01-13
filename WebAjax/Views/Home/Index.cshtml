@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <div class="row">
+        <p><a onclick="AfficheEmployees()" class="btn btn-outline-dark">Affiche employees</a></p>
+        <p><a onclick="ClearEmployees()" class="btn btn-outline-dark">Clear employees</a></p>
+    </div>
+
+    <div class="row" id="main">
+    </div>
+</main>
+
+<script>
+    AfficheEmployees = function () {
+        $.ajax({
+            url: "/Home/Employees",
+            type: "GET",
+            dataType: "html",
+            success: function (data) {
+                $("#main").html(data);
+            }
+        });
+    }
+
+    ClearEmployees = function () {
+        $("#main").html("");
+    }
+</script>

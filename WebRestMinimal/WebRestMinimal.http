@@ -1,0 +1,11 @@
+@WebRestMinimal_HostAddress = http://localhost:5267
+
+GET {{WebRestMinimal_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{WebRestMinimal_HostAddress}}/todos/1
+Accept: application/json
+
+###

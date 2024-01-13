@@ -1,0 +1,25 @@
+﻿@model IEnumerable<WebAjax.Models.Employee>
+@{
+    ViewBag.Title = "Employees";
+}
+
+<h2>Employees</h2>
+<table>
+    <thead>
+        <tr>
+            <th style="font-size:16px; font-weight:bold">Id</th>
+            <th style="font-size:16px; font-weight:bold">Name</th>
+            <th style="font-size:16px; font-weight:bold">Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
